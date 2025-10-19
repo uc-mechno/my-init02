@@ -1,0 +1,19 @@
+{
+  "name": "my-init02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bs-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "php:lint": "markuplint **/*.php",
+    "html:lint": "markuplint **/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@markuplint/php-parser": "^4.6.21",
+    "markuplint": "^4.13.1"
+  }
+}

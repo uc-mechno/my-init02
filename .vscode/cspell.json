@@ -1,0 +1,18 @@
+{
+  "ignorePaths": [
+    "**/package.json", // package.jsonを除外
+    "**/package-lock.json", // package-lock.jsonを除外
+    "**/node_modules/**", // node_modules以下を除外
+    "**/.vscode/**", // .vscode以下を除外
+    "/.history/**", // .historyファイルを除外
+    "**/settings.json" // settings.jsonを除外
+  ],
+  "words": [
+    // ここに除外する単語を追加。
+    "hoverfocus",
+    "csscomb",
+    "markuplintrc",
+    "smacss",
+    "MAMP"
+  ]
+}

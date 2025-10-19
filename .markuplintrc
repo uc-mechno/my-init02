@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "markuplint:recommended"
+  ],
+  "excludeFiles": [
+    "./node_modules/**/*.html",
+    "./node_modules/**/*.php"
+  ],
+  "parser": {
+    ".*\\.php$": "@markuplint/php-parser"
+  },
+  "rules": {
+    "attr-value-quotes": {
+      "severity": "error",
+      "value": "double"
+    }
+  }
+}

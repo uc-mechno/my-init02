@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start PHP Server",
+      "type": "shell",
+      "command": "php -S localhost:3000 -t .",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".",
+            "endsPattern": "."
+          }
+        }
+      ]
+    },
+    {
+      "label": "Start PHP + BrowserSync (Auto Reload + No Cache)",
+      "type": "shell",
+      "command": "npx browser-sync start --proxy 'localhost:3000' --files '**/*.php, **/*.scss, **/*.js' --port 4000 --no-ui --browser 'google chrome' --no-cache",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "dependsOn": ["Start PHP Server"]
+    }
+  ]
+}

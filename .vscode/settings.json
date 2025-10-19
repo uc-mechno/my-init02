@@ -1,0 +1,102 @@
+{
+  // ========================
+  // ✨ フォーマッタの設定
+  // ========================
+  "[html]": {
+    "editor.formatOnSave": true, // htmlファイルは保存時にフォーマットする
+    //"editor.defaultFormatter": "esbenp.prettier-vscode"
+     // フォーマッタを標準のhtmlフォーマッタにする
+    "editor.defaultFormatter": "vscode.html-language-features" // VSCode標準
+  },
+  "[css]": {
+    "editor.formatOnSave": false, // cssファイルは保存時にフォーマットしない
+    "editor.defaultFormatter": "naumstory.vscode-csscomb" // CSSComb
+  },
+  "[scss]": {
+    "editor.formatOnSave": true, // scssファイルは保存時にフォーマットする
+    "editor.defaultFormatter": "naumstory.vscode-csscomb" // CSSComb
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true, // javascriptファイルは保存時にフォーマットする
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.formatOnSave": true, // jsonファイルは保存時にフォーマットする
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.formatOnSave": true, // phpファイルは保存時にフォーマットする
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" // intelephense
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false, // markdownファイルは保存時にフォーマットしない
+    "files.trimTrailingWhitespace": false // Markdownでは空白削除を無効化
+  },
+  "[liquid]": {
+    "editor.defaultFormatter": "sissel.shopify-liquid", // liquidファイルのフォーマッタ
+    "editor.formatOnSave": false // liquidファイルは保存時にフォーマットする
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markuplint": "explicit" // 保存時に markuplint を自動実行
+  },
+
+  // ========================
+  // ✨ 拡張機能: prettier
+  // ========================
+  "prettier.ignorePath": ".prettierignore", // 除外ファイルのパス
+  "prettier.requireConfig": true, // 設定ファイルがプロジェクトのルートディレクトリに存在する場合にのみ動作します。
+  "prettier.configPath": ".prettierrc", // 設定ファイルの名前と場所(各プロジェクトのrootに置きます。)
+  "prettier.prettierPath": "/Users/ユーザー名/.volta/tools/image/packages/prettier/lib/node_modules/prettier", // prettierのパス(Voltaを使っている場合)
+
+  // ========================
+  // ✨ 拡張機能: CSSComb
+  // ========================
+  "csscomb.formatOnSave": false, //保存時にフォーマットするかどうか（しない）
+  "csscomb.ignoreFilesOnSave": [
+    //除外ファイルの設定
+    "**/node_modules/**", // node_modules以下を除外
+    "/development/css/compass-mixins/**" // compass-mixinsファイル
+  ],
+  "csscomb.syntaxAssociations": {
+    "postcss": "scss" // scssに対応
+  },
+  "csscomb.preset": ".vscode/csscomb.json", //設定ファイルの指定
+
+  // ========================
+  // ✨ 拡張機能: Live Sass Compiler
+  // ========================
+  //のAutoprefixer設定
+  // "liveSassCompile.settings.autoprefix": [
+  //   "last 2 versions", // メジャーバージョンの最新2つ
+  //   "> 1%", // グローバルシェアが1%以上
+  //   "not dead" // 過去1年間にアップデートされたブラウザのみ
+  // ],
+  //除外リスト
+  "liveSassCompile.settings.excludeList": [
+    "/**/node_modules/**", // node_modulesファイルを除外
+    "/.vscode/**", // .vscodeファイルを除外
+    "/.history/**",
+    "/bu", // buフォルダを除外
+    "/sanko", // sankoフォルダを除外
+  ],
+  "liveSassCompile.settings.generateMap": false, //mapファイルを出すか（true）
+  "liveSassCompile.settings.showOutputWindowOn": "Error", // エラーログ出力（エラー時のみ）
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded", // フォーマットルール
+      "extensionName": ".css", // コンパイルされたファイルの拡張子
+      "savePath": "/development/css" // 保存場所のパス
+    }
+    // ,
+    // {
+    //   "format": "compressed", // フォーマットルール
+    //   "extensionName": ".min.css", // コンパイルされたファイルの拡張子
+    //   "savePath": "/development/css" // 保存場所のパス
+    // }
+  ],
+  // ========================
+  // ✨ 拡張機能: Markuplint
+  // ========================
+  // markuplint 拡張機能を有効化
+  "markuplint.enable": true,
+}
