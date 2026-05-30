@@ -1,0 +1,88 @@
+{
+  // ========================
+  // ✨ フォーマッタの設定
+  // ========================
+
+  "editor.formatOnSave": true, // 保存時にフォーマット
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit", // 保存時にESLintの自動修正を実行
+    "source.fixAll.stylelint": "explicit" // 保存時にStylelintの自動修正を実行
+  },
+
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.html-language-features" // VSCode標準
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // cssをprettierで整形
+  },
+
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // scssをprettierで整形
+  },
+
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // prettierを指定
+  },
+
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[php]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" // intelephense
+  },
+
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "files.trimTrailingWhitespace": false // Markdownでは空白削除を無効化
+  },
+
+  // ========================
+  // ✨ 拡張機能: ESLint
+  // ========================
+  "eslint.validate": ["javascript"], // ESLintをJavaScriptファイルに適用
+
+  // ========================
+  // ✨ 拡張機能: stylelint
+  // ========================
+  "stylelint.validate": ["scss"], // stylelintはscssのみ適用
+
+  // ========================
+  // ✨ 拡張機能: prettier
+  // ========================
+  "prettier.ignorePath": ".prettierignore", // 除外ファイルパス
+  "prettier.requireConfig": true, // 設定ファイルがある場合のみ動作
+  "prettier.configPath": ".prettierrc", // 設定ファイルのパス
+  "prettier.prettierPath": "./node_modules/prettier", // prettierのパス
+
+  // ========================
+  // ✨ 拡張機能: Live Sass Compiler
+  // ========================
+  "liveSassCompile.settings.autoprefix": [
+    "last 2 versions" // メジャーバージョンの最新2つ
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "/**/node_modules/**", // node_modules配下すべて除外
+    "/**/.vscode/**", // .vscode配下すべて除外
+    "/**/.history/**" // .history配下すべて除外
+  ],
+  "liveSassCompile.settings.generateMap": false, // mapファイルを出すか（false）
+  "liveSassCompile.settings.showOutputWindowOn": "Error", // エラーログ出力（エラー時のみ）
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded", // フォーマットルール
+      "extensionName": ".css", // コンパイルされたファイルの拡張子
+      "savePath": "/development/css" // 保存場所のパス
+    }
+  ],
+
+  // ========================
+  // ✨ 拡張機能: Markuplint
+  // ========================
+  "markuplint.enable": true
+}
