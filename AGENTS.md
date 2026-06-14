@@ -17,10 +17,11 @@ npm run preview  # プロダクションビルドのプレビュー
 ```
 assets/js/
 ├── _main.js       # エントリポイント（モジュールのインポートとイベントリスナーの登録）
-├── _const.js      # グローバル定数（SITE_URL, CURRENT_URL, SITE_NAME, WP_PATH, THEMES_PATH）
+├── _const.js      # グローバル定数（SITE_URL, CURRENT_URL, SITE_NAME）
 ├── _accordion.js  # モジュール – named export のみ、自己実行しない
 ├── _modal.js      # モジュール – named export のみ、自己実行しない
 ├── _slider.js     # モジュール – named export のみ、自己実行しない
+├── _copyright.js  # モジュール – named export のみ、自己実行しない
 └── common.js      # ビルド出力 – 手動編集禁止
 ```
 

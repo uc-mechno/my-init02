@@ -1,3 +1,3 @@
-export const modal = () => {
+export function modal() {
   console.log('modal');
 };
