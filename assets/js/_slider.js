@@ -1,3 +1,3 @@
-export function slider() {
+export const slider = () => {
   console.log('slider');
 };
