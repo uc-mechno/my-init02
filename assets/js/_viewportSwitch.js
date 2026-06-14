@@ -1,11 +1,7 @@
+import { global } from './_global.js';
 /**
  * ビューポート幅に応じて `meta[name="viewport"]` を切り替える。
- *
  * 360px 以下では固定幅にし、それ以外ではデバイス幅に合わせる。
- * 画面幅の判定には `window.screen.width` を使い、`width=360` に切り替えた後でも
- * 元の画面幅へ戻ったことを判定できるようにする。
- *
- * @returns {void}
  */
 export const viewportSwitch = () => {
   const viewport = document.querySelector('meta[name="viewport"]');
