@@ -1,3 +1,3 @@
-export function accordion() {
+export const accordion = () => {
   console.log('accordion');
 };
