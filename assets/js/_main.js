@@ -1,9 +1,13 @@
 import { viewportSwitch } from './_viewportSwitch.js';
 import { updateCopyright } from './_updateCopyright.js';
+import { scrollAnimationObserver } from './_scrollAnimationObserver.js';
 
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
   updateCopyright();
   viewportSwitch();
+  scrollAnimationObserver();
 });
 
-document.addEventListener('DOMContentLoaded', function () {});
+window.addEventListener('load', function () {});
+
+window.addEventListener('resize', function () {});
